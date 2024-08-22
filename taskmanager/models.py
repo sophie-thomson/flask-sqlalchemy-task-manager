@@ -27,7 +27,6 @@ class Category(db.Model):
         return self.category_name
 
 
-
 class Task(db.Model):
     # schema for the Task model
     # Each row on the table has a unique id as the first column
@@ -48,6 +47,6 @@ class Task(db.Model):
         # represents itself as a string
         # Uses placeholders of {0}, {1}, and {2}
         # Python .format method tells prog what data to put in each placeholder
-        return "#{0} - Task: {1}  |  Urgent: {2}".format(
+        return "#{0} - Task: {1} | Urgent: {2}".format(
             self.id, self.task_name, self.is_urgent
         )
