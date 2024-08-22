@@ -13,7 +13,8 @@ def home():
 
 @app.route("/categories")
 def categories():
-    return render_template("categories.html")
+    categories = list(Category.query.order_by(Category.category_name).all())
+    return render_template("categories.html", categories=categories)
 
 # 'get' method will get the form content
 # 'post' will add the content to the database
