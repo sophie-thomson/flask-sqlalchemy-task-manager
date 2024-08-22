@@ -7,4 +7,4 @@ from taskmanager.models import Category, Task
 # Create a basic app route (or 'view') using / to take you to 'home()' function in base.html
 @app.route("/")
 def home():
-    return render_template("base.html")
+    return render_template("tasks.html")
